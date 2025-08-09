@@ -1,12 +1,13 @@
-🏠 House Price Prediction using Ridge Regression (Flask App)
-📌 Project Overview
-This project predicts house prices based on property and location features using a Ridge Regression model.
-It is deployed as an interactive Flask web application where users can input house details and get an estimated price instantly.
+# 🏠 House Price Prediction using Ridge Regression (Flask App)
 
-📂 Project Structure
-bash
-Copy
-Edit
+## 📌 Project Overview
+This project predicts **house prices** based on property and location features using a Ridge Regression model.  
+It is deployed as an interactive **Flask web application** where users can input house details and get an estimated price instantly.
+
+---
+
+## 📂 Project Structure
+```
 house-price-ridge/
 │
 ├── app.py                  # Flask application
@@ -23,83 +24,95 @@ house-price-ridge/
 │   ├── css/style.css       # App styling
 │   └── imgs/               # Generated plots
 └── README.md               # Project documentation
-⚙️ How It Works
-Data Source
-The model uses a synthetic housing dataset (house_data.csv) containing property attributes and sale prices.
+```
 
-Feature Selection
+---
+
+## ⚙️ How It Works  
+
+### **Data Source**  
+The model uses a **synthetic housing dataset** (`house_data.csv`) containing property attributes and sale prices.
+
+---
+
+### **Feature Selection**  
 The following features are used as inputs for prediction:
 
-area → House area in square feet
+- `area` → House area in square feet  
+- `bedrooms` → Number of bedrooms  
+- `bathrooms` → Number of bathrooms  
+- `age` → Age of the property (in years)  
+- `distance_to_city` → Distance from city center (in km)  
+- `garage_spaces` → Number of garage spaces  
+- `has_garden` → Whether the house has a garden (1 = Yes, 0 = No)  
 
-bedrooms → Number of bedrooms
+---
 
-bathrooms → Number of bathrooms
-
-age → Age of the property (in years)
-
-distance_to_city → Distance from city center (in km)
-
-garage_spaces → Number of garage spaces
-
-has_garden → Whether the house has a garden (1 = Yes, 0 = No)
-
-Model
-A Ridge Regression model is trained on the selected features.
+### **Model**  
+A **Ridge Regression** model is trained on the selected features.  
 The Ridge model helps reduce overfitting by penalizing large coefficients.
 
-Deployment
-The trained model is deployed via a Flask application.
+---
+
+### **Deployment**  
+The trained model is deployed via a **Flask** application.  
 The web interface allows users to:
 
-Input house details
+1. Input house details  
+2. Get a predicted price in real time  
+3. View an **Actual vs Predicted** scatter plot from a sample dataset
 
-Get a predicted price in real time
+---
 
-View an Actual vs Predicted scatter plot from a sample dataset
+## 🔧 Installation  
 
-🔧 Installation
-1. Install Dependencies
-bash
-Copy
-Edit
+### 1. Install Dependencies
+```bash
 pip install flask scikit-learn pandas numpy matplotlib joblib
-2. Train the Model (if not already trained)
-bash
-Copy
-Edit
+```
+
+### 2. Train the Model (if not already trained)
+```bash
 python train.py
-3. Run the Flask App
-bash
-Copy
-Edit
+```
+
+### 3. Run the Flask App
+```bash
 python app.py
-Visit: http://127.0.0.1:5000
+```
 
-🖥️ Sample UI
-Input Form Example:
+Visit: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
 
-Feature	Example Value
-Area (sq ft)	1500
-Bedrooms	3
-Bathrooms	2
-Age (years)	10
-Distance to City (km)	5
-Garage Spaces	1
-Has Garden	1 (Yes)
+---
 
-Output Example:
+## 🖥️ Sample UI  
 
-nginx
-Copy
-Edit
+**Input Form Example:**
+| Feature               | Example Value |
+|----------------------|--------------|
+| Area (sq ft)         | 1500         |
+| Bedrooms             | 3            |
+| Bathrooms            | 2            |
+| Age (years)          | 10           |
+| Distance to City (km)| 5             |
+| Garage Spaces        | 1             |
+| Has Garden           | 1 (Yes)      |
+
+**Output Example:**
+```
 Predicted Price: $245,000
-Sample Plot:
-A scatter plot comparing actual vs predicted prices for a sample of 50 houses.
+```
 
-🙋‍♂️ Author
-Hari Prasath S
-GitHub Profile
+**Sample Plot:**
+_A scatter plot comparing actual vs predicted prices for a sample of 50 houses._
 
-📘 License
+---
+
+## 🙋‍♂️ Author  
+Hari Prasath S  
+[GitHub Profile](#)
+
+---
+
+## 📘 License  
 This project is open source and free to use.
