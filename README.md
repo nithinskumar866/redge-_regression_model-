@@ -109,7 +109,7 @@ _A scatter plot comparing actual vs predicted prices for a sample of 50 houses._
 ---
 
 ## 🙋‍♂️ Author  
-Hari Prasath S  
+Nithin.S  
 [GitHub Profile](#)
 
 ---
